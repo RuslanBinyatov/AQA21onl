@@ -1,7 +1,6 @@
 public class Calculator {
     private String level;
 
-
     public int sum(int a, int b) {
         return a + b;
     }
