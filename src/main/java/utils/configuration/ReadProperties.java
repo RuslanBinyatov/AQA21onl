@@ -1,5 +1,8 @@
 package utils.configuration;
 
+import java.io.IOException;
+import java.util.Properties;
+
 public class ReadProperties {
     private static final Properties properties;
 
