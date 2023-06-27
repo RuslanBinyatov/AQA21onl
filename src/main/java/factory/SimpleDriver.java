@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SimpleDriver {
 
     public WebDriver getDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         return new ChromeDriver();
     }
