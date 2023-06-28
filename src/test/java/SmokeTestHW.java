@@ -28,6 +28,10 @@ public class SmokeTestHW {
         WebElement lossesInput = driver.findElement(By.id("el_f_losses"));
         WebElement calcButton = driver.findElement(By.name("button"));
 
+        widthInput.sendKeys("3");
+        lenghtInput.sendKeys("4");
+        lossesInput.sendKeys("120");
+
         WebElement selectWebElement1 = driver.findElement(By.id("room_type"));
         Select selectRoomType = new Select(selectWebElement1);
         WebElement selectWebElement2 = driver.findElement(By.id("heating_type"));
@@ -36,13 +40,9 @@ public class SmokeTestHW {
         selectRoomType.selectByVisibleText("Ванная");
         selectHeatingType.selectByValue("3");
 
-        widthInput.sendKeys("3");
-        lenghtInput.sendKeys("4");
-        lossesInput.sendKeys("120");
-
         calcButton.click();
 
-        Assert.assertEquals(driver.findElement(By.id("floor_cable_power")).getText(),"67");
+        Assert.assertEquals(driver.findElement(By.id("floor_cable_power")).getText(), "67");
         Assert.assertEquals(driver.findElement(By.id("spec_floor_cable_power")).getText(), "6");
     }
 
