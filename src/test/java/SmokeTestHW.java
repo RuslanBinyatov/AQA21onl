@@ -39,11 +39,11 @@ public class SmokeTestHW {
         widthInput.sendKeys("3");
         lenghtInput.sendKeys("4");
         lossesInput.sendKeys("120");
+
         calcButton.click();
 
-        Assert.assertEquals(driver.findElement(By.id("floor_cable_power")).getText(), "67");
+        Assert.assertEquals(driver.findElement(By.id("floor_cable_power")).getText(),"67");
         Assert.assertEquals(driver.findElement(By.id("spec_floor_cable_power")).getText(), "6");
-
     }
 
     @AfterMethod
