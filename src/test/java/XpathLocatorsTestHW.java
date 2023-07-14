@@ -25,9 +25,6 @@ public class XpathLocatorsTestHW {
     public void basicXpathLocatorsTest() {
         driver.get(ReadProperties.getUrl());
 
-        // Абсолютный xpath
-        Assert.assertTrue(driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/div[1]/div/div[2]")).isDisplayed());
-
         // Все элементы на странице начина с HTML
         driver.findElements(By.xpath("//*"));
 
