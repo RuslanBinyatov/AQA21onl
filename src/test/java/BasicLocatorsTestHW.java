@@ -24,7 +24,7 @@ public class BasicLocatorsTestHW {
     public void basicLocatorsTest() {
         driver.get(ReadProperties.getUrl());
 
-        Thread.sleep(2000);
+//        Thread.sleep(100000);
 
         // Find webElement by ID
         driver.findElement(By.id("bmiVar1")).sendKeys(ReadProperties.height());
@@ -39,7 +39,7 @@ public class BasicLocatorsTestHW {
         driver.findElement(By.tagName("sup"));
 
         // Find webElement by LinkText
-        driver.findElement(By.linkText("Статьи")).click();
+        driver.findElement(By.linkText("Статьи"));
 
         // Find webElement by PartialLinkText
         driver.findElement(By.partialLinkText(" обратной связи")).click();
