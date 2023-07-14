@@ -101,6 +101,6 @@ public class CssSelectorsTestHW {
         Assert.assertEquals(2, driver.findElements(By.cssSelector("i:last-child")).size());
 
         // Поиск элемента с тэгом li и которым является n-ым дочерним элементом
-        Assert.assertEquals(1, driver.findElements(By.cssSelector("li:nth-child(2)")).size());
+        Assert.assertEquals(1, driver.findElements(By.cssSelector("li:nth-child(3)")).size());
     }
 }
