@@ -24,6 +24,8 @@ public class BasicLocatorsTestHW {
     public void basicLocatorsTest() {
         driver.get(ReadProperties.getUrl());
 
+        Thread.sleep(2000);
+
         // Find webElement by ID
         driver.findElement(By.id("bmiVar1")).sendKeys(ReadProperties.height());
 
