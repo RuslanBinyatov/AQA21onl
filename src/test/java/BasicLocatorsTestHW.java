@@ -15,16 +15,14 @@ public class BasicLocatorsTestHW {
         driver = browserFactory.getDriver();
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 
     @Test
     public void basicLocatorsTest() {
         driver.get(ReadProperties.getUrl());
-
-//        Thread.sleep(100000);
 
         // Find webElement by ID
         driver.findElement(By.id("bmiVar1")).sendKeys(ReadProperties.height());
@@ -42,6 +40,6 @@ public class BasicLocatorsTestHW {
         driver.findElement(By.linkText("Статьи"));
 
         // Find webElement by PartialLinkText
-        driver.findElement(By.partialLinkText(" обратной связи")).click();
+        driver.findElement(By.partialLinkText("обратной связи"));
     }
 }
