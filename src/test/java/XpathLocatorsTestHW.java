@@ -29,38 +29,38 @@ public class XpathLocatorsTestHW {
         driver.findElements(By.xpath("//*"));
 
         // Аналог поиска по tagName
-        Assert.assertTrue(driver.findElement(By.xpath("//h1")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//sup")).isDisplayed());
 
-        // Аналог родительского div и на один уровень ниже р1
-        Assert.assertTrue(driver.findElement(By.xpath("//div/h1")).isDisplayed());
+        // Аналог родительского ol и на один уровень ниже li
+        Assert.assertTrue(driver.findElement(By.xpath("//ol/li")).isDisplayed());
 
-        // Аналог родительского div и на любом уровене ниже div
-        Assert.assertTrue(driver.findElement(By.xpath("//div//div")).isDisplayed());
+        // Аналог родительского form и на любом уровене ниже div
+        Assert.assertTrue(driver.findElement(By.xpath("//form//div")).isDisplayed());
 
-        // Поиск элемента с тэгом div у которого есть аьттрибут id
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@id]")).isDisplayed());
+        // Поиск элемента с тэгом form у которого есть аьттрибут id
+        Assert.assertTrue(driver.findElement(By.xpath("//form[@id]")).isDisplayed());
 
-        // Поиск элемента у которого есть аттрибут id cо значением top-logo
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@id = 'top-logo']")).isDisplayed());
+        // Поиск элемента у которого есть аттрибут id cо значением hiddenForm
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id = 'hiddenForm']")).isDisplayed());
 
-        // Поиск элемента у которого есть аттрибут method cо значением и aттрибут target со значением
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@method='post' and @target='_blank']")).isDisplayed());
+        // Поиск элемента у которого есть аттрибут name cо значением и aттрибут type со значением
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@name='fieldText' and @type='hidden']")).isDisplayed());
 
         // Поиск элемента у которого значение аттрибута начинается с
-        Assert.assertTrue(driver.findElement(By.xpath("//*[starts-with(@id, 'new')]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//*[starts-with(@id, 'autosize')]")).isDisplayed());
 
         // Поиск элемента у которого значение аттрибута содержит подстроку
-        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@id, 'Template')]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(@id, 'helpers')]")).isDisplayed());
 
         // Поиск элемента у которого текстовое значение содержит равно
-        Assert.assertTrue(driver.findElement(By.xpath("//div[text() = 'All Projects']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//*[. = 'Todos']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//span[text() = 'Рассчитать']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//*[. = 'Рассчитать']")).isDisplayed());
 
         // Поиск элемента у которого текстовое значение содержит подстроку
-        Assert.assertTrue(driver.findElement(By.xpath("//*[contains(text(), 'All Projects')]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//*[contains(text(), 'обратной')]")).isDisplayed());
 
         // Поиск элемента по индексу
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@class = 'summary-links text-secondary']/a[2]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//li[21]")).isDisplayed());
     }
 
     @Test
