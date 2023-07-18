@@ -1,15 +1,16 @@
 package pages;
 
 import baseEntities.BasePage;
+import baseEntities.BasePageHW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DashboardProductsPage extends BasePage {
-    private final static String pagePath = "/index.php?/dashboard/";
+public class DashboardProductsPage extends BasePageHW {
+    private final static String pagePath = "/inventory.html";
 
     // Блок описания локаторов для элементов
-    private final By headerTitleLabelLocator = By.xpath("//div[contains(@class, 'content-header-title') and contains(text(), 'All Projects')]");
+    private final By headerTitleLabelLocator = By.xpath("//span[contains(@class, 'title') and contains(text(), 'Products')]");
 
     public TopMenuPage topMenuPage;
     public SideMenuPage sideMenuPage;
