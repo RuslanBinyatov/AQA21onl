@@ -35,9 +35,13 @@ public class LoginPageHW extends BasePageHW {
         return driver.findElement(logInButtonLocator);
     }
 
+    public void setUserName(String value) {
+        getUserNameInput().sendKeys(value);
+    }
+
     // Блок комплексных методов
     public void login(String username, String psw) {
-        setEmail(username);
+        setUserName(username);
         getPswInput().sendKeys(psw);
         getLogInButton().click();
     }

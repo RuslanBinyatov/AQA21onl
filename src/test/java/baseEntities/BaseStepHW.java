@@ -2,6 +2,7 @@ package baseEntities;
 
 import org.openqa.selenium.WebDriver;
 import pages.LoginPageHW;
+import pages.InventoryPageHW;
 
 public class BaseStepHW {
     protected WebDriver driver;

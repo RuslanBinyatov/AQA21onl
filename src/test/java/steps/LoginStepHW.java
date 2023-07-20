@@ -2,6 +2,7 @@ package steps;
 
 import baseEntities.BaseStepHW;
 import org.openqa.selenium.WebDriver;
+import pages.InventoryPageHW;
 
 public class LoginStepHW extends BaseStepHW {
 
@@ -9,7 +10,7 @@ public class LoginStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public LoginPageHW successLogin(String username, String psw) {
+    public InventoryPageHW successLogin(String username, String psw) {
         loginPage.login(username, psw);
 
         return inventoryPage;
