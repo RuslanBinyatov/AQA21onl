@@ -1,25 +1,17 @@
 package steps;
 
-import baseEntities.BaseStep;
+import baseEntities.BaseStepHW;
 import org.openqa.selenium.WebDriver;
-import pages.DashboardPage;
-import pages.LoginPage;
 
-public class LoginStepHW extends BaseStep {
+public class LoginStepHW extends BaseStepHW {
 
-    public LoginStep(WebDriver driver) {
+    public LoginStepHW(WebDriver driver) {
         super(driver);
     }
 
-    public DashboardPage successLogin(String username, String psw) {
+    public LoginPageHW successLogin(String username, String psw) {
         loginPage.login(username, psw);
 
-        return dashboardPage;
-    }
-
-    public LoginPage negativeLogin(String username, String psw) {
-        loginPage.login(username, psw);
-
-        return loginPage;
+        return inventoryPage;
     }
 }
