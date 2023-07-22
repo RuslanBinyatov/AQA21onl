@@ -5,15 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class OverviewPage extends BasePage {
+public class CheckoutTwoPage extends InventoryPage {
     private final static String pagePath = "/checkout-step-two.html";
-
-    // Блок описания локаторов для элементов
 
     private final By finishButtonLocator = By.id("finish");
 
-    // Блок инициализации
-    public OverviewPage(WebDriver driver) {
+    public CheckoutTwoPage(WebDriver driver) {
         super(driver);
     }
 
@@ -22,12 +19,15 @@ public class OverviewPage extends BasePage {
         return finishButtonLocator;
     }
 
-    // Блок атомарных методов
+    public void openPageByUrl() {
+        super.openPageByUrl(pagePath);
+    }
 
     public WebElement getFinishButton() {
         return driver.findElement(finishButtonLocator);
     }
 
-    // Блок комплексных методов
-
+    public void finishShopping() {
+        getFinishButton().click();
+    }
 }

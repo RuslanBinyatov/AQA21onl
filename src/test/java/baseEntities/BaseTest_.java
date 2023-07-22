@@ -4,26 +4,24 @@ import factory.BrowserFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import steps.CheckoutStep;
-import steps.LoginStep;
-import steps.ProductStep;
-import utils.configuration.ReadProperties;
+import steps.AuthorizationStep;
+import steps.ShoppingStep;
+import utils.configurations.ReadProperties;
 
-public class BaseTest {
+public class BaseTest_ {
     protected WebDriver driver;
 
-    protected LoginStep loginStep;
-    protected ProductStep productStep;
-    protected CheckoutStep checkoutStep;
+    protected AuthorizationStep authorizationStep;
+    protected ShoppingStep shoppingStep;
 
     @BeforeMethod
     public void setUp() {
         BrowserFactory browserFactory = new BrowserFactory();
         driver = browserFactory.getDriver();
 
-        loginStep = new LoginStep(driver);
-        productStep = new ProductStep(driver);
-        checkoutStep = new CheckoutStep(driver);
+        authorizationStep = new AuthorizationStep(driver);
+        shoppingStep = new ShoppingStep(driver);
+
 
         driver.get(ReadProperties.getUrl());
     }
@@ -32,5 +30,4 @@ public class BaseTest {
     public void tearDown() {
         driver.quit();
     }
-
 }
