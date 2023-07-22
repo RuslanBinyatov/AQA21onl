@@ -7,7 +7,7 @@
 //
 //import static utils.configuration.ReadProperties.password;
 //
-//public class LoginTestHW extends BaseTestHW {
+//public class AddToCartTestHW extends BaseTestHW {
 //
 //    @Test
 //    public void successLoginTest() {

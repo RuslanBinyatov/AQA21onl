@@ -1,4 +1,4 @@
-package tests;
-
-public class SmokeTest {
-}
+//package tests;
+//
+//public class SmokeTest {
+//}

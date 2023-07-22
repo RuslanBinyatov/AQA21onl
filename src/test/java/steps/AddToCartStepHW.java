@@ -4,9 +4,9 @@
 //import org.openqa.selenium.WebDriver;
 //import pages.InventoryPageHW;
 //
-//public class LoginStepHW extends BaseStepHW {
+//public class AddToCartStepHW extends BaseStepHW {
 //
-//    public LoginStepHW(WebDriver driver) {
+//    public AddToCartStepHW(WebDriver driver) {
 //        super(driver);
 //    }
 //
