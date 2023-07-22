@@ -12,7 +12,7 @@ public abstract class BasePage_HW {
     }
 
     public void openPageByUrl_HW(String pagePath) {
-        driver.get(ReadProperties.getUrlHW() + pagePath);
+        driver.get(ReadProperties.getUrl() + pagePath);
     }
 
     protected abstract By getPageIdentifier();

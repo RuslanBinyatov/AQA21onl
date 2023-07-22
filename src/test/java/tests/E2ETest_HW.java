@@ -11,7 +11,7 @@ public class E2ETest_HW extends BaseTest_HW {
     public void E2ETest() {
         Assert.assertTrue(
                 loginStep_HW.successLogin_HW(
-                        ReadProperties.usernameHW(), ReadProperties.passwordHW()
+                        ReadProperties.username(), ReadProperties.password()
                 ).isPageOpened()
 
         );

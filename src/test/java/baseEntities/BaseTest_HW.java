@@ -27,7 +27,7 @@ public class BaseTest_HW {
         checkoutYourInformationStep_HW = new CheckoutYourInformationStep_HW(driver);
         checkoutOverviewStep_HW = new CheckoutOverviewStep_HW(driver);
         checkoutCompleteStep_HW = new CheckoutCompleteStep_HW(driver);
-        driver.get(ReadProperties.getUrlHW());
+        driver.get(ReadProperties.getUrl());
     }
 
     @AfterMethod
