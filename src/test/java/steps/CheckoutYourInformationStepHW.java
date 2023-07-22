@@ -11,14 +11,14 @@ public class CheckoutYourInformationStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public CheckoutYourInformationPageHW fillingInWithValidData_HW() {
-        checkoutYourInformationPage_HW.fillInYourInfoData();
-        return checkoutYourInformationPage_HW;
+    public CheckoutYourInformationPageHW fillingInWithValidDataHW() {
+        checkoutYourInformationPageHW.fillInYourInfoData();
+        return checkoutYourInformationPageHW;
     }
 
     public CheckoutOverviewPageHW continueCheckout(){
-        checkoutYourInformationPage_HW.getContinueButton().click();
-        return checkoutOverviewPage_HW;
+        checkoutYourInformationPageHW.getContinueButton().click();
+        return checkoutOverviewPageHW;
     }
 
 

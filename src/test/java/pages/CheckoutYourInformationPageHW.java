@@ -9,7 +9,7 @@ public class CheckoutYourInformationPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
-    private final By headerTitleLocator_CheckoutYourInformationPage_HW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocator_CheckoutYourInformationPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Your Information')]");
 
     //public BurgerMenuPage_HW burgerMenuPage_HW;
@@ -27,7 +27,7 @@ public class CheckoutYourInformationPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocator_CheckoutYourInformationPage_HW;
+        return headerTitleLocator_CheckoutYourInformationPageHW;
     }
 
     // Блок атомарных методов

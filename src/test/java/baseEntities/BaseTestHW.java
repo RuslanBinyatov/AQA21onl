@@ -9,24 +9,24 @@ import utils.configuration.ReadProperties;
 
 public class BaseTestHW {
     protected WebDriver driver;
-    protected LoginStepHW loginStep_HW;
-    protected ProductsStepHW productsStep_HW;
-    protected CartStepHW cartStep_HW;
-    protected CheckoutYourInformationStepHW checkoutYourInformationStep_HW;
-    protected CheckoutOverviewStepHW checkoutOverviewStep_HW;
-    private CheckoutCompleteStepHW checkoutCompleteStep_HW;
+    protected LoginStepHW loginStepHW;
+    protected ProductsStepHW productsStepHW;
+    protected CartStepHW cartStepHW;
+    protected CheckoutYourInformationStepHW checkoutYourInformationStepHW;
+    protected CheckoutOverviewStepHW checkoutOverviewStepHW;
+    private CheckoutCompleteStepHW checkoutCompleteStepHW;
 
 
     @BeforeMethod
     public void setUp() {
         BrowserFactory browserFactory = new BrowserFactory();
         driver = browserFactory.getDriver();
-        loginStep_HW = new LoginStepHW(driver);
-        productsStep_HW = new ProductsStepHW(driver);
-        cartStep_HW = new CartStepHW(driver);
-        checkoutYourInformationStep_HW = new CheckoutYourInformationStepHW(driver);
-        checkoutOverviewStep_HW = new CheckoutOverviewStepHW(driver);
-        checkoutCompleteStep_HW = new CheckoutCompleteStepHW(driver);
+        loginStepHW = new LoginStepHW(driver);
+        productsStepHW = new ProductsStepHW(driver);
+        cartStepHW = new CartStepHW(driver);
+        checkoutYourInformationStepHW = new CheckoutYourInformationStepHW(driver);
+        checkoutOverviewStepHW = new CheckoutOverviewStepHW(driver);
+        checkoutCompleteStepHW = new CheckoutCompleteStepHW(driver);
         driver.get(ReadProperties.getUrl());
     }
 

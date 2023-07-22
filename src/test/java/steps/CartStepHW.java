@@ -11,12 +11,12 @@ public class CartStepHW extends BaseStepHW {
     }
 
     public CheckoutYourInformationPageHW checkout_HW() {
-        cartPage_HW.getCheckoutButton().click();
-        return checkoutYourInformationPage_HW;
+        cartPageHW.getCheckoutButton().click();
+        return checkoutYourInformationPageHW;
     }
 
     public boolean checkProductIsInTheCart(){
-        productsPage_HW.getItemTitle().isDisplayed();
+        productsPageHW.getItemTitle().isDisplayed();
         return true;
     }
 

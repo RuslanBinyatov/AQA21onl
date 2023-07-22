@@ -11,12 +11,12 @@ public class CheckoutOverviewStepHW extends BaseStepHW {
     }
 
     public CheckoutCompletePageHW finishCheckout (){
-        checkoutOverviewPage_HW.getFinishButton().click();
-        return checkoutCompletePage_HW;
+        checkoutOverviewPageHW.getFinishButton().click();
+        return checkoutCompletePageHW;
     }
 
     public boolean checkProductIsInTheOverview(){
-        productsPage_HW.getItemTitle().isDisplayed();
+        productsPageHW.getItemTitle().isDisplayed();
         return true;
     }
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 public class ProductsPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
-    private final By headerTitleLocator_ProductsPage_HW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocator_ProductsPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Products')]");
 
     public CartPageHW cartPage_HW;
@@ -27,7 +27,7 @@ public class ProductsPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocator_ProductsPage_HW;
+        return headerTitleLocator_ProductsPageHW;
     }
 
     // Блок атомарных методов

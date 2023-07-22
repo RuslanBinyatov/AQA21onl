@@ -11,19 +11,19 @@ public class ProductsStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public ProductsPageHW addToCart_HW() {
-        productsPage_HW.getAddToCartButton().click();
-        return productsPage_HW;
+    public ProductsPageHW addToCartHW() {
+        productsPageHW.getAddToCartButton().click();
+        return productsPageHW;
     }
 
     public ProductsPageHW removeButtonIsDisplayed() {
-        productsPage_HW.getRemoveFromCartButton().isDisplayed();
-        return productsPage_HW;
+        productsPageHW.getRemoveFromCartButton().isDisplayed();
+        return productsPageHW;
     }
 
-    public CartPageHW openCart_HW() {
-        productsPage_HW.getOpenCartButton().click();
-        return cartPage_HW;
+    public CartPageHW openCartHW() {
+        productsPageHW.getOpenCartButton().click();
+        return cartPageHW;
     }
 
 }

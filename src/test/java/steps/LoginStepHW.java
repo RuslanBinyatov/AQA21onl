@@ -10,9 +10,9 @@ public class LoginStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public ProductsPageHW successLogin_HW(String usernameHW, String pswHW) {
-        loginPage_HW.login_HW(usernameHW, pswHW);
+    public ProductsPageHW successLoginHW(String usernameHW, String pswHW) {
+        loginPageHW.login_HW(usernameHW, pswHW);
 
-        return productsPage_HW;
+        return productsPageHW;
     }
 }

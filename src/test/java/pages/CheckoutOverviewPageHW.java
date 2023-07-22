@@ -9,7 +9,7 @@ public class CheckoutOverviewPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
-    private final By headerTitleLocator_CheckoutOverviewPage_HW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocator_CheckoutOverviewPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Overview')]");
 
     private final By finishButtonLocator = By.id("finish");
@@ -22,7 +22,7 @@ public class CheckoutOverviewPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocator_CheckoutOverviewPage_HW;
+        return headerTitleLocator_CheckoutOverviewPageHW;
     }
 
     // Блок атомарных методов

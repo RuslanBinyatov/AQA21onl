@@ -9,7 +9,7 @@ public class CartPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
-    private final By headerTitleLocator_CartPage_HW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocator_CartPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Your Cart')]");
 
     private final By checkoutButtonLocator = By.id("checkout");
@@ -22,7 +22,7 @@ public class CartPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocator_CartPage_HW;
+        return headerTitleLocator_CartPageHW;
     }
 
     // Блок атомарных методов
