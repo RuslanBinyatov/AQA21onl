@@ -16,7 +16,7 @@ public class CartStepHW extends BaseStepHW {
     }
 
     public boolean checkProductIsInTheCart(){
-        productsPageHW.getItemTitle().isDisplayed();
+        inventoryPageHW.getItemTitle().isDisplayed();
         return true;
     }
 

@@ -7,7 +7,7 @@ public class BaseStepHW {
     protected WebDriver driver;
 
     protected LoginPageHW loginPageHW;
-    protected ProductsPageHW productsPageHW;
+    protected InventoryPageHW inventoryPageHW;
     protected CartPageHW cartPageHW;
     protected CheckoutYourInformationPageHW checkoutYourInformationPageHW;
     protected CheckoutOverviewPageHW checkoutOverviewPageHW;
@@ -18,7 +18,7 @@ public class BaseStepHW {
         this.driver = driver;
 
         loginPageHW = new LoginPageHW(driver);
-        productsPageHW = new ProductsPageHW(driver);
+        inventoryPageHW = new InventoryPageHW(driver);
         cartPageHW = new CartPageHW(driver);
         checkoutYourInformationPageHW = new CheckoutYourInformationPageHW(driver);
         checkoutOverviewPageHW = new CheckoutOverviewPageHW(driver);

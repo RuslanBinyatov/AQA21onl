@@ -16,7 +16,7 @@ public class CheckoutOverviewStepHW extends BaseStepHW {
     }
 
     public boolean checkProductIsInTheOverview(){
-        productsPageHW.getItemTitle().isDisplayed();
+        inventoryPageHW.getItemTitle().isDisplayed();
         return true;
     }
 

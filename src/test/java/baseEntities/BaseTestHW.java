@@ -10,11 +10,11 @@ import utils.configuration.ReadProperties;
 public class BaseTestHW {
     protected WebDriver driver;
     protected LoginStepHW loginStepHW;
-    protected ProductsStepHW productsStepHW;
+    protected InventoryStepHW inventoryStepHW;
     protected CartStepHW cartStepHW;
     protected CheckoutYourInformationStepHW checkoutYourInformationStepHW;
     protected CheckoutOverviewStepHW checkoutOverviewStepHW;
-    private CheckoutCompleteStepHW checkoutCompleteStepHW;
+    protected CheckoutCompleteStepHW checkoutCompleteStepHW;
 
 
     @BeforeMethod
@@ -22,7 +22,7 @@ public class BaseTestHW {
         BrowserFactory browserFactory = new BrowserFactory();
         driver = browserFactory.getDriver();
         loginStepHW = new LoginStepHW(driver);
-        productsStepHW = new ProductsStepHW(driver);
+        inventoryStepHW = new InventoryStepHW(driver);
         cartStepHW = new CartStepHW(driver);
         checkoutYourInformationStepHW = new CheckoutYourInformationStepHW(driver);
         checkoutOverviewStepHW = new CheckoutOverviewStepHW(driver);
