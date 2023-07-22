@@ -2,17 +2,19 @@
 //
 //import factory.BrowserFactory;
 //import org.openqa.selenium.WebDriver;
+//import org.testng.annotations.AfterClass;
 //import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.BeforeMethod;
-//import pages.InventoryPageHW;
 //import steps.LoginStepHW;
+//import steps.ShoppingStep;
 //import utils.configuration.ReadProperties;
 //
 //public class BaseTestHW {
 //    protected WebDriver driver;
 //
 //    protected LoginStepHW loginStep;
-//    protected InventoryPageHW inventoryPage;
+//    protected ShoppingStep shoppingStep;
 //
 //    @BeforeMethod
 //    public void setUp() {
@@ -20,14 +22,13 @@
 //        driver = browserFactory.getDriver();
 //
 //        loginStep = new LoginStepHW(driver);
-//        inventoryPage = new InventoryPageHW(driver);
+//        shoppingStep = new ShoppingStep(driver);
 //
 //        driver.get(ReadProperties.getUrl());
 //    }
 //
-////    @AfterMethod
-////    public void tearDown() {
-////        driver.quit();
-////    }
-//
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 //}
