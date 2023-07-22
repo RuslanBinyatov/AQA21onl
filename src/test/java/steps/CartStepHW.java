@@ -1,18 +1,16 @@
 package steps;
 
-import baseEntities.BaseStep_HW;
+import baseEntities.BaseStepHW;
 import org.openqa.selenium.WebDriver;
-import pages.CartPage_HW;
-import pages.CheckoutYourInformationPage_HW;
-import pages.ProductsPage_HW;
+import pages.CheckoutYourInformationPageHW;
 
-public class CartStep_HW extends BaseStep_HW {
+public class CartStepHW extends BaseStepHW {
 
-    public CartStep_HW(WebDriver driver) {
+    public CartStepHW(WebDriver driver) {
         super(driver);
     }
 
-    public CheckoutYourInformationPage_HW checkout_HW() {
+    public CheckoutYourInformationPageHW checkout_HW() {
         cartPage_HW.getCheckoutButton().click();
         return checkoutYourInformationPage_HW;
     }

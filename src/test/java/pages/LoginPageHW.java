@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntities.BasePage_HW;
+import baseEntities.BasePageHW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPage_HW extends BasePage_HW {
+public class LoginPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
     private final By userNameInputLocator = By.id("user-name");
@@ -13,7 +13,7 @@ public class LoginPage_HW extends BasePage_HW {
     private final By loginButtonLocator = By.id("login-button");
 
     // Блок инициализации
-    public LoginPage_HW(WebDriver driver) {
+    public LoginPageHW(WebDriver driver) {
         super(driver);
     }
 

@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntities.BasePage_HW;
+import baseEntities.BasePageHW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CartPage_HW extends BasePage_HW {
+public class CartPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
@@ -16,7 +16,7 @@ public class CartPage_HW extends BasePage_HW {
 
     // Блок инициализации
 
-    public CartPage_HW(WebDriver driver) {
+    public CartPageHW(WebDriver driver) {
         super(driver);
     }
 

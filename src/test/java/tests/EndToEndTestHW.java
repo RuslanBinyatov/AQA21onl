@@ -1,11 +1,11 @@
 package tests;
 
-import baseEntities.BaseTest_HW;
+import baseEntities.BaseTestHW;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.configuration.ReadProperties;
 
-public class E2ETest_HW extends BaseTest_HW {
+public class EndToEndTestHW extends BaseTestHW {
 
     @Test
     public void E2ETest() {

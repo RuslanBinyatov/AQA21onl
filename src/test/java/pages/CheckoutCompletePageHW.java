@@ -1,10 +1,10 @@
 package pages;
 
-import baseEntities.BasePage_HW;
+import baseEntities.BasePageHW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CheckoutCompletePage_HW extends BasePage_HW {
+public class CheckoutCompletePageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
@@ -13,7 +13,7 @@ public class CheckoutCompletePage_HW extends BasePage_HW {
 
     // Блок инициализации
 
-    public CheckoutCompletePage_HW(WebDriver driver) {
+    public CheckoutCompletePageHW(WebDriver driver) {
         super(driver);
     }
 

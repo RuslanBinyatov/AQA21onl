@@ -1,17 +1,17 @@
 package pages;
 
-import baseEntities.BasePage_HW;
+import baseEntities.BasePageHW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ProductsPage_HW extends BasePage_HW {
+public class ProductsPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
     private final By headerTitleLocator_ProductsPage_HW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Products')]");
 
-    public CartPage_HW cartPage_HW;
+    public CartPageHW cartPage_HW;
 
     private final By addToCartButtonLocator = By.id("add-to-cart-sauce-labs-bike-light");
     private final By removeFromCartButtonLocator = By.id("remove-sauce-labs-bike-light");
@@ -19,10 +19,10 @@ public class ProductsPage_HW extends BasePage_HW {
     private final By itemTitleLocator = By.id("shopping_cart_container");
 
     // Блок инициализации
-    public ProductsPage_HW(WebDriver driver) {
+    public ProductsPageHW(WebDriver driver) {
         super(driver);
 
-        cartPage_HW = new CartPage_HW(driver);
+        cartPage_HW = new CartPageHW(driver);
     }
 
     @Override
