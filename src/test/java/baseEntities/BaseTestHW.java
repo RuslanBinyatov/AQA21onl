@@ -12,10 +12,9 @@ public class BaseTestHW {
     protected LoginStepHW loginStepHW;
     protected InventoryStepHW inventoryStepHW;
     protected CartStepHW cartStepHW;
-    protected CheckoutYourInformationStepHW checkoutYourInformationStepHW;
-    protected CheckoutOverviewStepHW checkoutOverviewStepHW;
+    protected CheckoutOneStepHW checkoutOneStepHW;
+    protected CheckoutTwoStepHW checkoutTwoStepHW;
     protected CheckoutCompleteStepHW checkoutCompleteStepHW;
-
 
     @BeforeMethod
     public void setUp() {
@@ -24,8 +23,8 @@ public class BaseTestHW {
         loginStepHW = new LoginStepHW(driver);
         inventoryStepHW = new InventoryStepHW(driver);
         cartStepHW = new CartStepHW(driver);
-        checkoutYourInformationStepHW = new CheckoutYourInformationStepHW(driver);
-        checkoutOverviewStepHW = new CheckoutOverviewStepHW(driver);
+        checkoutOneStepHW = new CheckoutOneStepHW(driver);
+        checkoutTwoStepHW = new CheckoutTwoStepHW(driver);
         checkoutCompleteStepHW = new CheckoutCompleteStepHW(driver);
         driver.get(ReadProperties.getUrl());
     }

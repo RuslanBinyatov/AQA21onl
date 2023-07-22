@@ -8,5 +8,4 @@ public class CheckoutCompleteStepHW extends BaseStepHW {
     public CheckoutCompleteStepHW(WebDriver driver) {
         super(driver);
     }
-
 }

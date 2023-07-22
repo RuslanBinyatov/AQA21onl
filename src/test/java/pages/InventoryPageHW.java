@@ -8,15 +8,13 @@ import org.openqa.selenium.WebElement;
 public class InventoryPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
-    private final By headerTitleLocatorInventoryPage = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocatorInventoryPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Products')]");
 
     public CartPageHW cartPageHW;
 
     private final By addToCartButtonLocator = By.id("add-to-cart-sauce-labs-backpack");
-//    private final By removeFromCartButtonLocator = By.id("remove-sauce-labs-backpack");
     private final By openCartButtonLocator = By.id("shopping_cart_container");
-    private final By itemTitleLocator = By.id("shopping_cart_container");
 
     // Блок инициализации
     public InventoryPageHW(WebDriver driver) {
@@ -27,7 +25,7 @@ public class InventoryPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocatorInventoryPage;
+        return headerTitleLocatorInventoryPageHW;
     }
 
     // Блок атомарных методов
@@ -36,16 +34,7 @@ public class InventoryPageHW extends BasePageHW {
         return driver.findElement(addToCartButtonLocator);
     }
 
-//    public WebElement getRemoveFromCartButton() {
-//        return driver.findElement(removeFromCartButtonLocator);
-//    }
-
     public WebElement getOpenCartButton() {
         return driver.findElement(openCartButtonLocator);
     }
-
-    public WebElement getItemTitle() {
-        return driver.findElement(itemTitleLocator);
-    }
-
 }

@@ -2,7 +2,7 @@ package steps;
 
 import baseEntities.BaseStepHW;
 import org.openqa.selenium.WebDriver;
-import pages.CheckoutYourInformationPageHW;
+import pages.CheckoutOnePageHW;
 
 public class CartStepHW extends BaseStepHW {
 
@@ -10,14 +10,8 @@ public class CartStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public CheckoutYourInformationPageHW checkout_HW() {
+    public CheckoutOnePageHW checkoutHW() {
         cartPageHW.getCheckoutButton().click();
-        return checkoutYourInformationPageHW;
+        return checkoutOnePageHW;
     }
-
-    public boolean checkProductIsInTheCart(){
-        inventoryPageHW.getItemTitle().isDisplayed();
-        return true;
-    }
-
 }

@@ -5,14 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CheckoutYourInformationPageHW extends BasePageHW {
+public class CheckoutOnePageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
-    private final By headerTitleLocator_CheckoutYourInformationPageHW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocatorCheckoutOnePageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Your Information')]");
-
-    //public BurgerMenuPage_HW burgerMenuPage_HW;
 
     private final By firstNameInputLocator = By.id("first-name");
     private final By lastNameInputLocator = By.id("last-name");
@@ -21,13 +19,13 @@ public class CheckoutYourInformationPageHW extends BasePageHW {
 
     // Блок инициализации
 
-    public CheckoutYourInformationPageHW(WebDriver driver) {
+    public CheckoutOnePageHW(WebDriver driver) {
         super(driver);
     }
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocator_CheckoutYourInformationPageHW;
+        return headerTitleLocatorCheckoutOnePageHW;
     }
 
     // Блок атомарных методов
@@ -61,9 +59,8 @@ public class CheckoutYourInformationPageHW extends BasePageHW {
     }
 
     public void fillInYourInfoData() {
-        setFirstName("testFirstName");
-        setLastName("testLastName");
-        setPostalCode("123");
+        setFirstName("FirstName");
+        setLastName("LastName");
+        setPostalCode("PostalCode");
     }
-
 }

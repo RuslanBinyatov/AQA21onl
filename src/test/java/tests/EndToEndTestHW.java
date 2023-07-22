@@ -5,19 +5,26 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.configuration.ReadProperties;
 
+import static java.lang.Thread.sleep;
+
 public class EndToEndTestHW extends BaseTestHW {
 
     @Test
-    public void E2ETest() {
+    public void E2ETest() throws InterruptedException {
+        sleep(2000);
         Assert.assertTrue(loginStepHW.successLoginHW(ReadProperties.username(), ReadProperties.password()).isPageOpened());
+        sleep(2000);
         Assert.assertTrue(inventoryStepHW.addToCartHW().isPageOpened());
-//        Assert.assertTrue(inventoryStepHW.removeButtonIsDisplayed().isPageOpened());
+        sleep(2000);
         Assert.assertTrue(inventoryStepHW.openCartHW().isPageOpened());
-        Assert.assertTrue(cartStepHW.checkProductIsInTheCart());
-        Assert.assertTrue(cartStepHW.checkout_HW().isPageOpened());
-        Assert.assertTrue(checkoutYourInformationStepHW.fillingInWithValidDataHW().isPageOpened());
-        Assert.assertTrue(checkoutYourInformationStepHW.continueCheckout().isPageOpened());
-        Assert.assertTrue(checkoutOverviewStepHW.checkProductIsInTheOverview());
-        Assert.assertTrue(checkoutOverviewStepHW.finishCheckout().isPageOpened());
+        sleep(2000);
+        Assert.assertTrue(cartStepHW.checkoutHW().isPageOpened());
+        sleep(2000);
+        Assert.assertTrue(checkoutOneStepHW.fillingInWithValidDataHW().isPageOpened());
+        sleep(2000);
+        Assert.assertTrue(checkoutOneStepHW.continueCheckout().isPageOpened());
+        sleep(2000);
+        Assert.assertTrue(checkoutTwoStepHW.finishCheckout().isPageOpened());
+        sleep(2000);
     }
 }

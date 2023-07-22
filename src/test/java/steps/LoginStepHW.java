@@ -10,8 +10,8 @@ public class LoginStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public InventoryPageHW successLoginHW(String usernameHW, String pswHW) {
-        loginPageHW.loginHW(usernameHW, pswHW);
+    public InventoryPageHW successLoginHW(String username, String psw) {
+        loginPageHW.loginHW(username, psw);
 
         return inventoryPageHW;
     }

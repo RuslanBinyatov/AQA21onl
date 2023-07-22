@@ -16,14 +16,8 @@ public class InventoryStepHW extends BaseStepHW {
         return inventoryPageHW;
     }
 
-//    public InventoryPageHW removeButtonIsDisplayed() {
-//        inventoryPageHW.getRemoveFromCartButton().isDisplayed();
-//        return inventoryPageHW;
-//    }
-
     public CartPageHW openCartHW() {
         inventoryPageHW.getOpenCartButton().click();
         return cartPageHW;
     }
-
 }

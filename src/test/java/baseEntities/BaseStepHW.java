@@ -9,10 +9,9 @@ public class BaseStepHW {
     protected LoginPageHW loginPageHW;
     protected InventoryPageHW inventoryPageHW;
     protected CartPageHW cartPageHW;
-    protected CheckoutYourInformationPageHW checkoutYourInformationPageHW;
-    protected CheckoutOverviewPageHW checkoutOverviewPageHW;
+    protected CheckoutOnePageHW checkoutOnePageHW;
+    protected CheckoutTwoPageHW checkoutTwoPageHW;
     protected CheckoutCompletePageHW checkoutCompletePageHW;
-
 
     public BaseStepHW(WebDriver driver) {
         this.driver = driver;
@@ -20,8 +19,8 @@ public class BaseStepHW {
         loginPageHW = new LoginPageHW(driver);
         inventoryPageHW = new InventoryPageHW(driver);
         cartPageHW = new CartPageHW(driver);
-        checkoutYourInformationPageHW = new CheckoutYourInformationPageHW(driver);
-        checkoutOverviewPageHW = new CheckoutOverviewPageHW(driver);
+        checkoutOnePageHW = new CheckoutOnePageHW(driver);
+        checkoutTwoPageHW = new CheckoutTwoPageHW(driver);
         checkoutCompletePageHW = new CheckoutCompletePageHW(driver);
     }
 }
