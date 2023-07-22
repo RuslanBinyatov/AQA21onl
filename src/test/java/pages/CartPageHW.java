@@ -30,5 +30,4 @@ public class CartPageHW extends BasePageHW {
     public WebElement getCheckoutButton() {
         return driver.findElement(checkoutButtonLocator);
     }
-
 }
