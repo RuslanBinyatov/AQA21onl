@@ -11,7 +11,6 @@ public class CheckoutCompletePageHW extends BasePageHW {
 
     private final By headerTitleLocatorCheckoutCompletePageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Complete!')]");
-    private final By backHomeButtonLocator = By.id("back-to-products");
 
     // Блок инициализации
 
@@ -26,7 +25,4 @@ public class CheckoutCompletePageHW extends BasePageHW {
 
     // Блок атомарных методов
 
-    public WebElement getBackHomeButton() {
-        return driver.findElement(backHomeButtonLocator);
-    }
 }
