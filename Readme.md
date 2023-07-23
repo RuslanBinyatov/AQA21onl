@@ -12,4 +12,5 @@
 10. В поле "Zip/Postal Code" ввести значение: Postal Code
 11. Нажать кнопку "Continue"
 12. Нажать кнопку "Finish"
-13. нажать кнопку "Back Home"
+
+**Ожидаемый результат:** отображается надпись "Thank you for your order!"
