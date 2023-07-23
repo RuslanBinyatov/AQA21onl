@@ -1,139 +1,91 @@
-import data.StaticProviderDoubleHW;
-import data.StaticProviderIntHW;
+import data.StaticProviderHW;
 import org.testng.Assert;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 public class CalcTestHW extends BaseTest {
-    @Test
-    public void divInt_1() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
+    private int attempt = 1;
+
+    @Test(enabled = false)
+    public void divTest_1() {
+        int expectedValue  = 6;
+        int actualValue = calculator.div(18, 3);
+
         Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
     }
-    @Test
-    public void divDouble_1() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
+
+    @Test(testName = "Division test")
+    public void divTest_2() {
+        double expectedValue  = 632.8;
+        double actualValue = calculator.div(158.2, 0.25);
+
         Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
     }
-    @Test (enabled = false)
-    public void divInt_2() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (enabled = false)
-    public void divDouble_2() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (description = "Тест с описанием")
-    public void divInt_3() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (description = "Тест с описанием")
-    public void divDouble_3() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (testName = "Test with name_1")
-    public void divInt_4() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (testName = "Test with name_2")
-    public void divDouble_4() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (timeOut = 1000)
-    public void divInt_5() throws InterruptedException {
-        Thread.sleep(1000);
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (timeOut = 1000)
-    public void divDouble_5() throws InterruptedException {
-        Thread.sleep(1000);
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (invocationCount = 3, invocationTimeOut = 1000, threadPoolSize = 3)
-    public void divInt_6() throws InterruptedException {
+
+    @Test(timeOut = 1000)
+    public void waitLongTimeTest() throws InterruptedException {
         Thread.sleep(500);
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
+        double expectedValue  = 632.8;
+        double actualValue = calculator.div(158.2, 0.25);
+
         Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
     }
-    @Test (invocationCount = 3, invocationTimeOut = 1000, threadPoolSize = 3)
-    public void divDouble_6() throws InterruptedException {
+
+    @Test(invocationCount = 2, invocationTimeOut = 2000)
+    public void invocationCountTest() throws  InterruptedException {
         Thread.sleep(500);
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
+        int expectedValue  = 6;
+        int actualValue = calculator.div(18, 3);
+
         Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
     }
-    @Test (expectedExceptions = NullPointerException.class)
-    public void divInt_7() {
-        List list = null;
-        int size = list.size();
+
+    @Test(expectedExceptions = ArithmeticException.class)
+    public void exceptionTest() {
+        int result = calculator.div(18, 0);
     }
-    @Test (expectedExceptions = NullPointerException.class)
-    public void divDouble_7() {
-        List list = null;
-        int size = list.size();
+
+    @Test(expectedExceptions = ArithmeticException.class)
+    public void exceptionTest_1() {
+        int result = calculator.div(0, 0);
     }
-    @Test (priority = 1)
-    public void divInt_8() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
+
+    @Test
+    public void exceptionTest_2() {
+        double result = calculator.div(158.2, 0);
+
+        Assert.assertEquals(Double.POSITIVE_INFINITY, result);
     }
-    @Test (priority = 2)
-    public void divDouble_8() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
+
+    @Test
+    public void exceptionTest_3() {
+        double result = calculator.div(0.0, 0);
+
+        Assert.assertEquals(Double.NaN, result);
     }
-    @Test (dependsOnMethods = "divInt_5")
-    public void divInt_9() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
+
+    @Test(dataProvider = "Data for Division test", dataProviderClass = StaticProviderHW.class)
+    public void dataProviderTest(int a, int b, int expectedValue) throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertEquals(calculator.div(a, b), expectedValue, "Значения не одинаковые");
     }
-    @Test (dependsOnMethods = "divInt_9", alwaysRun = true)
-    public void divDouble_9() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
+
+    @Parameters({"login", "psw"})
+    @Test
+    public void paramTest(@Optional("Default login") String login, @Optional("Default psw") String psw) {
+        System.out.println("Login: " + login + " Password: " + psw);
     }
-    @Test (groups = "smoke", dependsOnGroups = "regression")
-    public void divInt_10() {
-        int expectedValue = 5;
-        int actualValue = calculator.divInt(10,2);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (groups = {"smoke", "regression"})
-    public void divDouble_10() {
-        double expectedValue = 4.2;
-        double actualValue = calculator.divDouble(10.5,2.5);
-        Assert.assertEquals(actualValue, expectedValue, "Значения не одинаковые");
-    }
-    @Test (dataProvider = "Data for Div Int test", dataProviderClass = StaticProviderIntHW.class)
-    public void divInt_11(int a, int b, int expectedValue) {
-        Assert.assertEquals(calculator.divInt(a, b),expectedValue, "Значения не одинаковые");
-    }
-    @Test (dataProvider = "Data for Div Double test", dataProviderClass = StaticProviderDoubleHW.class)
-    public void divDouble_11(double a, double b, double expectedValue) {
-        Assert.assertEquals(calculator.divDouble(a, b),expectedValue, "Значения не одинаковые");
+
+    @Test(retryAnalyzer = Retry.class)
+    public void retryTest() {
+        if (attempt == 5) {
+            System.out.println("Attempt is: " + attempt);
+            Assert.assertTrue(true);
+        } else {
+            attempt++;
+            System.out.println("Attempt is: " + attempt);
+            throw new NullPointerException();
+        }
     }
 }

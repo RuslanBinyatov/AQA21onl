@@ -2,20 +2,7 @@ public class Calculator {
     private String level;
 
     public int sum(int a, int b) {
-        return a + b;
-    }
-
-    public int divInt(int a, int b){
-        if (b==0) {
-            throw new ArithmeticException("На ноль делить нельзя!");
-        }
-        return a / b;
-    }
-    public double divDouble(double a, double b){
-        if (b==0) {
-            throw new ArithmeticException("На ноль делить нельзя!");
-        }
-        return (a / b);
+        return  a + b;
     }
 
     public String getLevel() {
@@ -24,5 +11,13 @@ public class Calculator {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public int div(int a, int b) {
+        return a / b;
+    }
+
+    public double div(double a, double b) {
+        return a / b;
     }
 }

@@ -1,4 +1,4 @@
-import data.StaticProvider;
+import data.StaticProviderHW;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -62,7 +62,7 @@ public class CalcTest extends BaseTest {
         int size = list.size();
     }
 
-    @Test (dataProvider = "Data for Sum test", dataProviderClass = StaticProvider.class)
+    @Test (dataProvider = "Data for Sum test", dataProviderClass = StaticProviderHW.class)
     public void dataProviderTest(int a, int b, int expectedValue) throws InterruptedException {
         Thread.sleep(1000);
         Assert.assertEquals(calculator.sum(a, b), expectedValue, "Значения не одинаковые");
