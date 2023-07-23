@@ -11,6 +11,8 @@ public class CheckoutCompletePageHW extends BasePageHW {
 
     private final By headerTitleLocatorCheckoutCompletePageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Complete!')]");
+    private final By completeHeaderLocator = By.xpath("//h2[contains(@class, 'complete-header') " +
+            "and contains(text(), 'Thank you for your order!')]");
 
     // Блок инициализации
 
@@ -24,5 +26,9 @@ public class CheckoutCompletePageHW extends BasePageHW {
     }
 
     // Блок атомарных методов
+
+    public WebElement getCompleteHeader() {
+        return driver.findElement(completeHeaderLocator);
+    }
 
 }

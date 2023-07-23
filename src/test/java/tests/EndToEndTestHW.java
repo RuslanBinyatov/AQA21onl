@@ -16,5 +16,6 @@ public class EndToEndTestHW extends BaseTestHW {
         Assert.assertTrue(checkoutOneStepHW.fillingInWithValidDataHW().isPageOpened());
         Assert.assertTrue(checkoutOneStepHW.continueCheckout().isPageOpened());
         Assert.assertTrue(checkoutTwoStepHW.finishCheckout().isPageOpened());
+        Assert.assertTrue(checkoutCompleteStepHW.completeHeaderIsDisplayed().isPageOpened());
     }
 }
