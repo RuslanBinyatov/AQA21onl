@@ -22,9 +22,9 @@ public class BaseTest {
         //driver.get(ReadProperties.getUrl());
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 
 }
