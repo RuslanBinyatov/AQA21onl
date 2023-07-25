@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AlertTestHW extends BaseTest {
+public class ContextMenuTestHW extends BaseTest {
 
     @Test
     public void alertTest() {

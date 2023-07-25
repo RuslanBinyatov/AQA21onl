@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import services.WaitService;
 
-public class FrameTestHW extends BaseTest {
+public class FramesTestHW extends BaseTest {
 
     @Test
     public void frameTest() {
