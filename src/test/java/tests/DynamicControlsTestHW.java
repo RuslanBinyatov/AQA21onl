@@ -16,17 +16,20 @@ public class DynamicControlsTestHW extends BaseTest {
         checkbox.isDisplayed();
 
         WebElement buttonRemove = waitService.waitForExists
-                (By.xpath("//*[@id=\"checkbox-example\"]/button"));
+                (By.cssSelector("#checkbox-example button"));
         buttonRemove.click();
         Assert.assertTrue(waitService.waitForElementInvisible(checkbox));
 
-        WebElement input = waitService.waitForExists(By.xpath("//*[@id=\"input-example\"]/input"));
+        WebElement input = waitService.waitForExists
+                (By.cssSelector("#input-example input"));
         input.isDisplayed();
         Assert.assertTrue(Boolean.parseBoolean(input.getAttribute("disabled")));
-        WebElement buttonEnable = waitService.waitForExists(By.xpath("//*[@id=\"input-example\"]/button"));
+        WebElement buttonEnable = waitService.waitForExists
+                (By.cssSelector("#input-example button"));
         buttonEnable.click();
 
-        WebElement text = waitService.waitForExists(By.xpath("//*[@id=\"message\"]"));
+        WebElement text = waitService.waitForExists
+                (By.id("message"));
         text.isDisplayed();
     }
 }
