@@ -20,7 +20,7 @@ public class FrameTests extends BaseTest {
 
         Assert.assertTrue(waitService.waitForVisibilityLocatedBy(By.id("tinymce")).isDisplayed());
 
-        driver.switchTo().parentFrame(); //на уровень вверх defaultContent - на самый верхний ур-нь
+        driver.switchTo().parentFrame();
         Assert.assertTrue(driver.findElement(By.className("tox-editor-container")).isDisplayed());
     }
 }

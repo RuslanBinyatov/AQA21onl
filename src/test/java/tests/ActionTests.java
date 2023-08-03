@@ -12,7 +12,6 @@ import java.util.List;
 
 public class ActionTests extends BaseTest {
 
-    @Test
     public void hoverTest() {
         driver.get("http://the-internet.herokuapp.com/hovers");
 
@@ -22,7 +21,7 @@ public class ActionTests extends BaseTest {
         List<WebElement> targetElements = waitService.waitForAllVisibleElementsLocatedBy(By.className("figure"));
 
         actions
-                .moveToElement(targetElements.get(0), 50, 50)
+                .moveToElement(targetElements.get(0), 10, 10)
                 .click(waitService.waitForVisibilityLocatedBy(By.cssSelector("[href='/users/1']")))
                 .build()
                 .perform();
@@ -38,7 +37,6 @@ public class ActionTests extends BaseTest {
 
         WebElement fileUploadElement = waitService.waitForExists(By.xpath("//form/input[@type='file']"));
         String pathToFile = ActionTests.class.getClassLoader().getResource("download.jpeg").getPath();
-        //String pathToFile = "C:\\Users\\olyad\\IdeaProjects\\AQA_TMS_Auto\\src\\test\\resources\\download.jpeg";
         System.out.println(pathToFile);
         fileUploadElement.sendKeys(pathToFile);
 

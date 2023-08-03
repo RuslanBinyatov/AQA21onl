@@ -21,9 +21,6 @@ public class LoginPage extends BasePage {
     // Блок инициализации
     public LoginPage(WebDriver driver) {
         super(driver);
-
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//        wait.wait(ExpectedConditions.);
     }
 
     @Override
