@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import services.WaitService;
 
-public class DynamicControlsTests extends BaseTest {
+public class DynamicControlsTestsHW extends BaseTest {
 
     @Test
     @Description("Demonstration of changing element's status.")
