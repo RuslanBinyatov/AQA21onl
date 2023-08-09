@@ -48,10 +48,10 @@ public class DynamicControlsTestsHW extends BaseTest {
         Assert.assertTrue(textInput.isEnabled());
     }
 
-//    @Test
-//    @Description("Taking a screenshot when test fails.")
-//    public void screenShotTest() {
-//        driver.get("http://the-internet.herokuapp.com/dynamic_controls");
-//        Assert.assertTrue(false);
-//    }
+    @Test
+    @Description("Taking a screenshot when test fails.")
+    public void screenShotTest() {
+        driver.get("http://the-internet.herokuapp.com/dynamic_controls");
+        Assert.assertTrue(false);
+    }
 }
