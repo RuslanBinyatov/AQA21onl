@@ -4,6 +4,7 @@ import baseEntities.BasePageHW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class CartPageHW extends BasePageHW {
 
@@ -12,7 +13,9 @@ public class CartPageHW extends BasePageHW {
     private final By headerTitleLocatorCartPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Your Cart')]");
 
-    private final By checkoutButtonLocator = By.id("checkout");
+    @FindBy (id = "checkout")
+    public WebElement checkoutButton;
+//    private final By checkoutButtonLocator = By.id("checkout");
 
     // Блок инициализации
 
@@ -22,12 +25,13 @@ public class CartPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocatorCartPageHW;
+        return By.id("checkout");
+//        return headerTitleLocatorCartPageHW;
     }
 
     // Блок атомарных методов
 
-    public WebElement getCheckoutButton() {
-        return driver.findElement(checkoutButtonLocator);
-    }
+//    public WebElement getCheckoutButton() {
+//        return driver.findElement(checkoutButtonLocator);
+//    }
 }
