@@ -26,8 +26,8 @@ public class CheckoutCompletePageHW extends BasePageHW {
     }
 
     // Блок атомарных методов
-    public WebElement getCompleteHeader() {
-        return By.xpath("//h2[contains(@class, 'complete-header') " +
-                "and contains(text(), 'Thank you for your order!')]");
-    }
+//    public WebElement getCompleteHeader() {
+//        return By.xpath("//h2[contains(@class, 'complete-header') " +
+//                "and contains(text(), 'Thank you for your order!')]");
+//    }
 }

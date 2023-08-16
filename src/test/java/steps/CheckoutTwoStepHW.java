@@ -11,7 +11,7 @@ public class CheckoutTwoStepHW extends BaseStepHW {
     }
 
     public CheckoutCompletePageHW finishCheckout (){
-        checkoutTwoPageHW.finishButton().click();
+        checkoutTwoPageHW.finishButton.click();
         return checkoutCompletePageHW;
     }
 

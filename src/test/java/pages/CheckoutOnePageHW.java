@@ -37,8 +37,8 @@ public class CheckoutOnePageHW extends BasePageHW {
 
     // Блок атомарных методов
     public void fillInYourInfoData() {
-        firstNameInput("FirstName");
-        lastNameInput("LastName");
-        postalCodeInput("PostalCode");
+        firstNameInput.sendKeys("FirstName");
+        lastNameInput.sendKeys("LastName");
+        postalCodeInput.sendKeys("PostalCode");
     }
 }
