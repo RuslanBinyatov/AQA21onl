@@ -13,8 +13,10 @@ public class InventoryPageHW extends BasePageHW {
 
     public CartPageHW cartPageHW;
 
-    private final By addToCartButtonLocator = By.id("add-to-cart-sauce-labs-backpack");
+    private final By addToCartButtonLocator = By.id("add-to-cart-sauce-labs-bike-light");
+    private final By removeFromCartButtonLocator = By.id("remove-sauce-labs-bike-light");
     private final By openCartButtonLocator = By.id("shopping_cart_container");
+    private final By itemTitleLocator = By.id("shopping_cart_container");
 
     // Блок инициализации
     public InventoryPageHW(WebDriver driver) {
@@ -29,12 +31,30 @@ public class InventoryPageHW extends BasePageHW {
     }
 
     // Блок атомарных методов
-
     public WebElement getAddToCartButton() {
         return driver.findElement(addToCartButtonLocator);
     }
 
+    public WebElement getRemoveFromCartButton() {
+        return driver.findElement(removeFromCartButtonLocator);
+    }
+
     public WebElement getOpenCartButton() {
         return driver.findElement(openCartButtonLocator);
+    }
+
+    public WebElement getItemTitle() {
+        return driver.findElement(itemTitleLocator);
+    }
+
+    // Блок комплексных методов
+    public InventoryPageHW addToCartHW() {
+        getAddToCartButton().click();
+        return new InventoryPageHW(driver);
+    }
+
+    public CartPageHW openCartHW() {
+        getOpenCartButton().click();
+        return new CartPageHW(driver);
     }
 }

@@ -9,7 +9,7 @@ public class CheckoutTwoPageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
-    private final By headerTitleLocatorCheckoutTwoPageHW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocatorTwoPageHW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Overview')]");
 
     private final By finishButtonLocator = By.id("finish");
@@ -22,12 +22,17 @@ public class CheckoutTwoPageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocatorCheckoutTwoPageHW;
+        return headerTitleLocatorTwoPageHW;
     }
 
     // Блок атомарных методов
-
     public WebElement getFinishButton() {
         return driver.findElement(finishButtonLocator);
+    }
+
+    // Блок комплексных методов
+    public CheckoutCompletePageHW finishCheckout (){
+        getFinishButton().click();
+        return new CheckoutCompletePageHW(driver);
     }
 }

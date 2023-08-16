@@ -11,8 +11,8 @@ public abstract class BasePageHW {
         this.driver = driver;
     }
 
-    public void openPageByUrl(String pagePath) {
-        driver.get(ReadProperties.getUrl() + pagePath);
+    public void openPageByUrl_HW(String pagePath) {
+        driver.get(ReadProperties.getUrlHW() + pagePath);
     }
 
     protected abstract By getPageIdentifier();

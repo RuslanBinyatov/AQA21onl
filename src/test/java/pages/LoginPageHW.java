@@ -23,7 +23,6 @@ public class LoginPageHW extends BasePageHW {
     }
 
     // Блок атомарных методов
-
     public WebElement getUserNameInput() {
         return driver.findElement(userNameInputLocator);
     }
@@ -37,9 +36,10 @@ public class LoginPageHW extends BasePageHW {
     }
 
     // Блок комплексных методов
-    public void loginHW(String username, String psw) {
+    public InventoryPageHW loginHW(String username, String psw) {
         getUserNameInput().sendKeys(username);
         getPswInput().sendKeys(psw);
         getLoginButton().click();
+        return new InventoryPageHW(driver);
     }
 }
