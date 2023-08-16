@@ -13,6 +13,7 @@ public class BaseStepHW {
     protected CheckoutTwoPageHW checkoutTwoPageHW;
     protected CheckoutCompletePageHW checkoutCompletePageHW;
 
+
     public BaseStepHW(WebDriver driver) {
         this.driver = driver;
 

@@ -1,6 +1,7 @@
 package pages;
 
 import baseEntities.BasePageHW;
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,6 @@ public class LoginPageHW extends BasePageHW {
     }
 
     // Блок атомарных методов
-
     public WebElement getUserNameInput() {
         return driver.findElement(userNameInputLocator);
     }
@@ -37,9 +37,9 @@ public class LoginPageHW extends BasePageHW {
     }
 
     // Блок комплексных методов
-    public void loginHW(String username, String psw) {
-        getUserNameInput().sendKeys(username);
-        getPswInput().sendKeys(psw);
+    public void loginNormal(User user) {
+        getUserNameInput().sendKeys(user.getUserName());
+        getPswInput().sendKeys(user.getPassword());
         getLoginButton().click();
     }
 }

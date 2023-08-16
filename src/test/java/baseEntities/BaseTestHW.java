@@ -14,7 +14,8 @@ public class BaseTestHW {
     protected CartStepHW cartStepHW;
     protected CheckoutOneStepHW checkoutOneStepHW;
     protected CheckoutTwoStepHW checkoutTwoStepHW;
-    protected CheckoutCompleteStepHW checkoutCompleteStepHW;
+    private CheckoutCompleteStepHW checkoutCompleteStepHW;
+
 
     @BeforeMethod
     public void setUp() {
