@@ -9,8 +9,8 @@ public class EndToEndTestHW extends BaseTestHW {
 
     @Test
     public void E2ETest() {
-            Assert.assertTrue(loginStepHW.successLogin_HW(DataHelper.getStandardUser()).isPageOpened());
-            Assert.assertTrue(inventoryStepHW.addToCart_HW().isPageOpened());
+            Assert.assertTrue(loginStepHW.successLoginHW(DataHelper.getStandardUser()).isPageOpened());
+            Assert.assertTrue(inventoryStepHW.addToCartHW().isPageOpened());
             Assert.assertTrue(inventoryStepHW.removeButtonIsDisplayed().isPageOpened());
             Assert.assertTrue(inventoryStepHW.openCartHW().isPageOpened());
             Assert.assertTrue(cartStepHW.checkProductIsInTheCart());

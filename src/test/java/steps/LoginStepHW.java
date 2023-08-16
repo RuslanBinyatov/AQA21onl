@@ -11,7 +11,7 @@ public class LoginStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public InventoryPageHW successLogin_HW(User user) {
+    public InventoryPageHW successLoginHW(User user) {
         loginPageHW.loginNormal(user);
         return inventoryPageHW;
     }

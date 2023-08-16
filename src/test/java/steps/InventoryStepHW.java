@@ -11,7 +11,7 @@ public class InventoryStepHW extends BaseStepHW {
         super(driver);
     }
 
-    public InventoryPageHW addToCart_HW() {
+    public InventoryPageHW addToCartHW() {
         inventoryPageHW.getAddToCartButton().click();
         return inventoryPageHW;
     }
