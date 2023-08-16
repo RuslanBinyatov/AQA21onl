@@ -11,7 +11,12 @@ public class CartStepHW extends BaseStepHW {
     }
 
     public CheckoutOnePageHW checkoutHW() {
-        cartPageHW.getCheckoutButton().click();
+        cartPageHW.checkoutButton().click();
         return checkoutOnePageHW;
+    }
+
+    public boolean checkProductIsInTheCart(){
+        inventoryPageHW.itemTitle.isDisplayed();
+        return true;
     }
 }

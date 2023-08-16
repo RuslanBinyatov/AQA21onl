@@ -12,12 +12,12 @@ public class InventoryStepHW extends BaseStepHW {
     }
 
     public InventoryPageHW addToCartHW() {
-        inventoryPageHW.getAddToCartButton().click();
+        inventoryPageHW.addToCartButton().click();
         return inventoryPageHW;
     }
 
     public CartPageHW openCartHW() {
-        inventoryPageHW.getOpenCartButton().click();
+        inventoryPageHW.openCartButton.click();
         return cartPageHW;
     }
 }

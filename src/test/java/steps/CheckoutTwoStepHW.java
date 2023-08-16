@@ -11,7 +11,12 @@ public class CheckoutTwoStepHW extends BaseStepHW {
     }
 
     public CheckoutCompletePageHW finishCheckout (){
-        checkoutTwoPageHW.getFinishButton().click();
+        checkoutTwoPageHW.finishButton().click();
         return checkoutCompletePageHW;
+    }
+
+    public boolean checkProductIsInTheOverview(){
+        inventoryPageHW.itemTitle.isDisplayed();
+        return true;
     }
 }

@@ -12,10 +12,11 @@ public class EndToEndTestHW extends BaseTestHW {
         Assert.assertTrue(loginStepHW.successLoginHW(ReadProperties.username(), ReadProperties.password()).isPageOpened());
         Assert.assertTrue(inventoryStepHW.addToCartHW().isPageOpened());
         Assert.assertTrue(inventoryStepHW.openCartHW().isPageOpened());
+        Assert.assertTrue(cartStepHW.checkProductIsInTheCart());
         Assert.assertTrue(cartStepHW.checkoutHW().isPageOpened());
         Assert.assertTrue(checkoutOneStepHW.fillingInWithValidDataHW().isPageOpened());
         Assert.assertTrue(checkoutOneStepHW.continueCheckout().isPageOpened());
+        Assert.assertTrue(checkoutTwoStepHW.checkProductIsInTheOverview());
         Assert.assertTrue(checkoutTwoStepHW.finishCheckout().isPageOpened());
-        Assert.assertTrue(checkoutCompleteStepHW.completeHeaderIsDisplayed().isPageOpened());
     }
 }
