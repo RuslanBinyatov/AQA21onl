@@ -1,18 +1,33 @@
 package steps;
 
-import baseEntities.BaseStepHW;
-import org.openqa.selenium.WebDriver;
-import pages.InventoryPageHW;
+import pages.LoginPageHW;
+import utils.configuration.ReadProperties;
+import baseEntities.BaseTestHW;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 
-public class LoginStepHW extends BaseStepHW {
+public class LoginStepHW extends BaseTestHW{
+    private BaseTestHW baseTest;
+    private LoginPageHW loginPagehw;
 
-    public LoginStepHW(WebDriver driver) {
-        super(driver);
+    public LoginStepHW(BaseTestHW baseTest) {
+        this.baseTest = baseTest;
     }
 
-    public InventoryPageHW successLoginHW(String username, String psw) {
-        loginPageHW.loginHW(username, psw);
+    @Given("start browser")
+    public void startBrowser() {
+    }
 
-        return inventoryPageHW;
+    @Given("open login page")
+    public void openLoginPage() {
+        driver.get(ReadProperties.getUrl());
+    }
+
+    @When("user logged in with username {} and password {}")
+    public void setUsernameAndPassword(String username, String password) {
+        loginPagehw = new LoginPageHW(driver);
+        loginPagehw.getUserNameInput().sendKeys(username);
+        loginPagehw.getPswInput().sendKeys(password);
+        loginPagehw.getLoginButton().click();
     }
 }

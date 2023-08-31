@@ -9,8 +9,10 @@ public class CheckoutOnePageHW extends BasePageHW {
 
     // Блок описания локаторов для элементов
 
-    private final By headerTitleLocatorCheckoutOnePageHW = By.xpath("//span[contains(@class, 'title') " +
+    private final By headerTitleLocator_CheckoutYourInformationPage_HW = By.xpath("//span[contains(@class, 'title') " +
             "and contains(text(), 'Checkout: Your Information')]");
+
+    //public BurgerMenuPage_HW burgerMenuPage_HW;
 
     private final By firstNameInputLocator = By.id("first-name");
     private final By lastNameInputLocator = By.id("last-name");
@@ -25,7 +27,7 @@ public class CheckoutOnePageHW extends BasePageHW {
 
     @Override
     protected By getPageIdentifier() {
-        return headerTitleLocatorCheckoutOnePageHW;
+        return headerTitleLocator_CheckoutYourInformationPage_HW;
     }
 
     // Блок атомарных методов
@@ -61,6 +63,6 @@ public class CheckoutOnePageHW extends BasePageHW {
     public void fillInYourInfoData() {
         setFirstName("FirstName");
         setLastName("LastName");
-        setPostalCode("PostalCode");
+        setPostalCode("123");
     }
 }

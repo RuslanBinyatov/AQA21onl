@@ -1,18 +1,21 @@
 package steps;
 
-import baseEntities.BaseStepHW;
-import org.openqa.selenium.WebDriver;
 import pages.CheckoutCompletePageHW;
-import pages.InventoryPageHW;
+import baseEntities.BaseTestHW;
+import io.cucumber.java.en.Then;
 
-public class CheckoutCompleteStepHW extends BaseStepHW {
+public class CheckoutCompleteStepHW extends BaseTestHW {
 
-    public CheckoutCompleteStepHW(WebDriver driver) {
-        super(driver);
+    private BaseTestHW baseTest;
+    private CheckoutCompletePageHW checkoutCompletePagehw;
+
+    public CheckoutCompleteStepHW (BaseTestHW baseTest) {
+        this.baseTest = baseTest;
+        checkoutCompletePagehw = new CheckoutCompletePageHW(driver);
     }
 
-    public CheckoutCompletePageHW completeHeaderIsDisplayed() {
-        checkoutCompletePageHW.getCompleteHeader().isDisplayed();
-        return checkoutCompletePageHW;
+    @Then("complete checkout page is displayed")
+    public void checkCompleteCheckoutPageIsOpened (){
+        checkoutCompletePagehw.isPageOpened();
     }
 }
