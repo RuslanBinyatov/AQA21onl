@@ -30,5 +30,4 @@ public class CheckoutCompletePageHW extends BasePageHW {
     public WebElement getCompleteHeader() {
         return driver.findElement(completeHeaderLocator);
     }
-
 }
