@@ -3,6 +3,7 @@ package steps;
 import pages.CheckoutCompletePageHW;
 import baseEntities.BaseTestHW;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 
 public class CheckoutCompleteStepHW extends BaseTestHW {
 
@@ -15,7 +16,7 @@ public class CheckoutCompleteStepHW extends BaseTestHW {
     }
 
     @Then("complete checkout page is displayed")
-    public void checkCompleteCheckoutPageIsOpened (){
-        checkoutCompletePagehw.isPageOpened();
+    public void checkCompleteCheckoutPageIsOpened() {
+        Assert.assertTrue(new CheckoutCompletePageHW(driver).isPageOpened());
     }
 }
